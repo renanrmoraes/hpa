@@ -52,10 +52,15 @@
 	?>
 
 <?php
+
+ob_start();
 for($i = 0; $i < 100000; $i++) {
-     $a += $i;
-     document.getElementById("count").innerHTML = a;
+  ob_end_clean();
+  $a += $i;
+  echo $a;
 }
+
 ?>
+
 </body>
 </html>
