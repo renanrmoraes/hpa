@@ -17,10 +17,12 @@
 </head>
 <body>
 	<?php
-		for($i = 0; $i < 100000; $i++) {
+		for($i = 0; $i < 10; $i++) {
 		     $a += $i;
 		     echo "$$a\n";
 		}
+		sleep 5
+		location.reload();
 	?>
 </body>
 </html>
