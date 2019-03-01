@@ -15,14 +15,11 @@
 	}
 	</style>
 </head>
-<body>
-	<?php
-		for($i = 0; $i < 10; $i++) {
-		     $a += $i;
-		     echo "$$a\n";
-		}
-		sleep 5
-		location.reload();
-	?>
-</body>
+  <body>
+    <?php
+        for($i = 0; $i < 10000; $i++) {
+        }
+    ?>
+    <?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
+  </body>
 </html>
