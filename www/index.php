@@ -55,9 +55,11 @@
 
 ob_start();
 for($i = 0; $i < 100000; $i++) {
-  ob_end_clean();
+  $output = ob_get_clean();
   $a += $i;
+  $output = $a;
   echo $a;
+
 }
 
 ?>
