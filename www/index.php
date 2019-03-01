@@ -54,7 +54,7 @@
 <?php
 for($i = 0; $i < 100000; $i++) {
      $a += $i;
-     document.getElementById("count").innerHTML = $a;
+     document.getElementById("count").innerHTML = a;
 }
 ?>
 </body>
