@@ -17,7 +17,7 @@
 </head>
   <body>
     <?php
-        for($i = 0; $i < 100000000; $i++) {
+        for($i = 0; $i < 500000000; $i++) {
         }
     ?>
     <?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
