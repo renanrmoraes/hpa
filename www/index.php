@@ -52,13 +52,10 @@
 	?>
 
 <?php
-$comidas = array('frutas'  => array('laranja', 'banana', 'maçã'),
-'veggie'  => array('cenoura', 'couve','ervilha'));
-// contagem recursiva
-echo count($comidas, COUNT_RECURSIVE);  // mostra 8
-// contagem normal
-echo count($comidas);                   // mostra 2
-?>
+for($i = 0; $i < 100000; $i++) {
+     $a += $i;
+     echo "$$a\n";
+}
 
 </body>
 </html>
