@@ -17,39 +17,6 @@
 </head>
 <body>
 	<img id="logo" src="logo.png" />
-<!-- Display the countdown timer in an element -->
-<p id="demo"></p>
-
-<script>
-// Set the date we're counting down to
-var countDownDate = new Date("Mar 1, 2019 15:37:25").getTime();
-
-// Update the count down every 1 second
-var x = setInterval(function() {
-
-  // Get todays date and time
-  var now = new Date().getTime();
-
-  // Find the distance between now and the count down date
-  var distance = countDownDate - now;
-
-  // Time calculations for days, hours, minutes and seconds
-  var days = Math.floor(distance / (1 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1 * 60 * 60 * 24)) / (1 * 60 * 60));
-  var minutes = Math.floor((distance % (60 * 60 * 60)) / (60 * 60));
-  var seconds = Math.floor((distance % (120 * 60)) / 60);
-
-  // Display the result in the element with id="demo"
-  document.getElementById("demo").innerHTML = days + "d " + hours + "h "
-  + minutes + "m " + seconds + "s ";
-
-  // If the count down is finished, write some text 
-  if (distance < 0) {
-    clearInterval(x);
-    document.getElementById("demo").innerHTML = "EXPIRED";
-  }
-}, 1000);
-</script>
 	<h1><?php echo "Hello ".($_ENV["NAME"]?$_ENV["NAME"]:"world")."!"; ?></h1>
 	<?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
 	<?php
@@ -83,5 +50,15 @@ var x = setInterval(function() {
 		<?php
 	}
 	?>
+
+<?php
+$comidas = array('frutas'  => array('laranja', 'banana', 'maçã'),
+'veggie'  => array('cenoura', 'couve','ervilha'));
+// contagem recursiva
+echo count($comidas, COUNT_RECURSIVE);  // mostra 8
+// contagem normal
+echo count($comidas);                   // mostra 2
+?>
+
 </body>
 </html>
