@@ -21,6 +21,20 @@
 <p id="demo"></p>
 
 <script>
+//Teste Carga CPU
+function get_server_load()
+{
+    $fh = fopen('/proc/loadavg', 'r')
+    $data = fread($fh, 6);
+    fclose($fh);
+    $load_avg = explode(" ", $data);
+    return floatval(trim($load_avg[0]));
+}
+
+set_time_limit(120);
+while(get_server_load() > $max_load)
+    sleep($load_sleep_time);
+
 // Set the date we're counting down to
 var countDownDate = new Date("Jan 5, 2021 15:37:25").getTime();
 
