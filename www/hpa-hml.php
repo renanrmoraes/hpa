@@ -19,7 +19,7 @@
     <?php
 	ob_start();
         for($i = 0; $i < 500000000; $i++) {
-		echo 'Texto que não será exibido. $i';
+		echo 'Texto que não será exibido.:' $i;
 		ob_end_clean();
 	}
     ?>
