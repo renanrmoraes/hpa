@@ -17,20 +17,11 @@
 </head>
   <body>
     <?php
-	if (ob_get_level() == 0) ob_start();
+	ob_start();
         for($i = 0; $i < 500000000; $i++) {
-        	echo "<br> Line to show.";
-	        echo str_pad('',4096)."\n";    
-
-        	ob_flush();
-	        flush();
-	        sleep(2);
+		echo 'Texto que não será exibido. $i';
+		ob_end_clean();
 	}
-
-	echo "Done.";
-
-	ob_end_flush();
-
     ?>
     <?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
   </body>
