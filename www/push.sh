@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sed -i 's/world! $2/world! $1/g' index.php
+#sed -i 's/world! $2/world! $1/g' index.php
 
 git add .
 sleep 5
