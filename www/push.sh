@@ -1,4 +1,7 @@
 #!/bin/bash
+
+sed -i 's/world! $2/world! $1/g' index.php
+
 git add .
 sleep 5
 git commit -m $1
