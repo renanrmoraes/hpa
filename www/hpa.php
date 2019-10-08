@@ -21,5 +21,9 @@
         }
     ?>
     <?php if($_ENV["HOSTNAME"]) {?><h3>My hostname is <?php echo $_ENV["HOSTNAME"]; ?></h3><?php } ?>
+    <?php
+         header('podName: $_ENV["HOSTNAME"]');;
+         exit;
+    ?>
   </body>
 </html>
