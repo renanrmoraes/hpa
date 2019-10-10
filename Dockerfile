@@ -5,7 +5,7 @@ RUN apk --update add nginx php5-fpm && \
     touch /var/log/nginx/access.log && \
     mkdir -p /run/nginx
 
-RUN mkdir -p /var/www/uploads/
+RUN mkdir -p /uploads
 
 ADD www /www
 ADD nginx.conf /etc/nginx/
